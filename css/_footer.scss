@@ -2,6 +2,9 @@
 
     &__footer-bg {
         background-color: #353535;
+        @include breakpoin(sm){
+            margin-top: -26px;
+        }
     }
 
     &__footer-item {
@@ -11,6 +14,9 @@
         color: #fff;
         @include breakpoin(md){
             flex-wrap: wrap;
+        }
+        @include breakpoin(sm) {
+            justify-content: center;
         }
     }
 
@@ -27,7 +33,11 @@
     }
 
     &__copyright {
-        text-align: center
+        text-align: center;
+        @include breakpoin(sm){
+            order: 1;
+            margin-top: 31px
+        }
     }
 }
 
@@ -40,6 +50,9 @@
         line-height: 23px;
         margin-bottom: 35px;
         text-transform: uppercase;
+        @include breakpoin(sm) {
+            text-align: center;
+        }
     }
 
     &__address {
@@ -48,7 +61,16 @@
         line-height: 23px;
     }
 }
-
+.phone{
+    @include breakpoin (sm){
+        border: 1px solid #4A4A4A;
+        padding: 14px 75px 14px 75px;
+        text-align: center;
+        margin-top: 14px;
+        display: block;
+        max-width: 280px;
+    }
+}
 
 .social-item {
 
@@ -62,11 +84,18 @@
     }
 
     &__icons {
-        display: flex;        
+        display: flex; 
+        justify-content: center;  
+        @include breakpoin(md){
+            margin-top: 35px;
+        }    
     }
-    
+
     &__img{
         padding-top: 13px;
+        @include breakpoin(md){
+            padding-top: 35px;
+        }
     }
 }
 .icons{
@@ -75,6 +104,12 @@
             height: 50px;
             border: 1px solid #4A4A4A;
             margin-top: 13px;
+            @include breakpoin (md){
+                width: 213px;
+                height: 101px;
+                border: 1px solid #4A4A4A;
+                margin-top: 13px
+            }
     }
 }
 
@@ -86,7 +121,8 @@
         @include fontRegular();
         font-size: 18px;
         line-height: 23px;
-        padding-bottom: 26px
+        padding-bottom: 26px;
+        
     }
 
     &__link {
@@ -96,6 +132,10 @@
         border: 1px solid #4A4A4A;
         padding: 14px 28px;
         text-transform: uppercase;
+        @include breakpoin(sm){
+            padding: 14px 75px 14px 75px;
+            text-align: center;
+        }
 
     }
 }

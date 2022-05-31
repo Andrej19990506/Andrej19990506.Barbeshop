@@ -24,7 +24,7 @@
     }
 
     @else if $point==sm {
-        @media (max-width: 578px) {
+        @media (max-width: 678px) {
             @content;
         }
     }
@@ -52,11 +52,20 @@
     @include breakpoin(md) {
         max-width: 663px;
     }
+
+    @include breakpoin(sm) {
+    padding: 0 ;
+    }
+
 }
 
 .back-ground {
     width: 100%;
     object-fit: cover;
+
+    @include breakpoin(sm) {
+        display: none;
+    }
 }
 
 

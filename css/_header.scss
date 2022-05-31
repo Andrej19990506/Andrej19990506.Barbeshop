@@ -1,3 +1,159 @@
+.modal-login{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 460px;
+    background-color: #E5DDD5;
+    padding: 64px 51px 51px 51px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 6;
+
+    &__desktop-close::before {
+        display: block;
+        content: "+";
+        transform: rotate(45deg);
+        color: white;
+    }
+
+    &__desktop-close{
+        width: 30px;
+        height: 30px;
+        background-color: rgba(130, 101, 80, 1);
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        cursor: pointer;
+    }
+    
+
+    &__desktop{
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        display: none;
+    }
+
+    &__title{
+        @include fontBold();
+        font-size: 40px;
+        line-height: 52px;
+        color: #000;
+        text-transform: uppercase;
+        margin-bottom: 23px;
+    }
+    &__discription{
+        @include fontRegular();
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 29px;
+    }
+
+
+    &__input{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        margin-bottom: 8px;
+    }
+
+    &__checkbox{
+        width: 33px;
+        height: 33px;
+        margin-right: 15px;
+    }
+
+    &__config{
+        display: flex;
+        align-items: center;
+        margin-bottom: 33px;
+    }
+    &__restore-pasword{
+        margin-left: auto;
+    }
+    &__button_desktop{
+        width: 100%;
+        padding: 19px 0 19px 0;
+        text-align: center;
+        background: rgba(130, 101, 80, 1);
+        font-size: 18px;
+        line-height: 23px;
+        @include fontBold();
+        text-transform: uppercase;
+        color: #fff;
+        border: none;
+    }
+    &__button_open{display: none;}
+    &__button_close{display: none;}
+}
+
+
+
+
+.logo-mobile{
+    display: none;
+    text-align: center;
+    background-color: #242424;
+    @include breakpoin(sm){
+        display: block;
+    }
+    &__img{
+        max-width: 667px;
+        padding: 29px 0 29px 0;
+    }
+}
+
+
+.nav-mobile{
+    background-color: #826550;
+    display: flex;
+    text-align: center;
+    display: none;
+    @include breakpoin(sm){
+        display: block;
+        display: flex;
+        text-align: center;
+    }
+
+    &__item{
+        width: 100%;
+        margin-left: 41px;
+    }
+    
+    &__list{
+        padding: 13px 0 13px 0;
+        list-style: none;
+        @include fontBold();
+        font-size: 18px;
+        line-height: 24px;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    &__burger{
+        width: 57px;
+        background-color: rgba(106, 77, 56, 1);
+        border: none;
+        transition: all ease 1s;
+    }
+}
+
+.overhiden-baar{
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 10;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 3;
+    margin-top: 90px;
+    display: none;
+    @include breakpoin(sm){
+        display: none;
+    }
+}
+
 .header {
     &__nav-item {
         background-color: #000;
@@ -6,6 +162,44 @@
     &__nav {
         padding: 25px 0 21px 0;
     }
+    
+}
+
+.nav-mobile__desktop-close{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(130, 101, 80, 1);
+    position: absolute;
+    top: 0;
+    left: -29px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    &::before {
+        display: block;
+        content: "+";
+        transform: rotate(45deg);
+        color: white;
+    }
+}
+
+.nav-mobile__menu{
+    display: none;
+    margin-left: auto;
+    background: rgba(106, 77, 56, 1);
+    width: 250px;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    top: 91px;
+    right: 0px;
+    @include breakpoin(sm){
+        display: none;
+        margin-right: -250px;
+        
+    }
+
+    
 }
 
 .nav {
@@ -13,6 +207,14 @@
     &__list {
         display: flex;
         position: relative;
+        @include breakpoin(sm){
+            flex-direction: column;
+            background: rgba(130, 101, 80, 1);
+            padding: 18px 0 0 0;
+        }
+    }
+    @include breakpoin(sm) {
+        display: none;
     }
 }
 
@@ -40,6 +242,11 @@
         @include breakpoin(lg){
             margin-right: 32px;
         }
+        @include breakpoin(sm){
+                padding: 18px 0 18px 21px;
+                box-shadow: 0px 2px 0px #71543f,
+                inset 0px 0px 0px #886e5b;
+        }
         &:hover::after {
             content: "";
             width: 100%;
@@ -56,6 +263,14 @@
         @include breakpoin(md){
             display: none;
         }
+        @include breakpoin(sm) {
+            margin: 0;
+            display: block;
+            padding-left: 21px;
+            box-shadow: none;
+            background: rgba(106, 77, 56, 1);
+        }
+
     }
 
         @include breakpoin(md){
