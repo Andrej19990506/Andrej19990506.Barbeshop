@@ -288,8 +288,10 @@
 @media (max-width: 678px) {
   .list__item {
     padding: 18px 0 18px 21px;
-    -webkit-box-shadow: 0px 2px 0px #71543f, inset 0px 0px 0px #886e5b;
-            box-shadow: 0px 2px 0px #71543f, inset 0px 0px 0px #886e5b;
+    -webkit-box-shadow: 0px 2px 0px #71543f,
+ inset 0px 0px 0px #886e5b;
+            box-shadow: 0px 2px 0px #71543f,
+ inset 0px 0px 0px #886e5b;
   }
 }
 
@@ -1153,7 +1155,7 @@
 }
 
 .person__img {
-  background-image: url(/img/photo.png);
+  background-image: url(img/photo.png);
   max-width: 249px;
   height: 171px;
   width: 100%;
@@ -1163,7 +1165,7 @@
 
 @media (max-width: 768px) {
   .person__img {
-    background-image: url(/img/photo2.png);
+    background-image: url(img/photo2.png);
     max-width: 80px;
     height: 80px;
     width: 100%;
